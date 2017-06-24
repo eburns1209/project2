@@ -1,0 +1,91 @@
+<script type="text/javascript" src="assets/js/athlete.js"></script>
+<link rel="stylesheet" type="text/css" href="assets/css/athlete.css">
+{{!-- <div class="container"> --}}
+<div class="card">
+  
+        <div class="card-header">
+      
+          <h2>Races</h2>
+      
+          <div class="raceButton">
+          {{!-- <a class="btn btn-primary" href="/raceAdd" role="button" id="add">Add a Race</a> --}}
+          <a class="btn btn-primary" href="/choose" role="button" id="home">Home</a>
+          </div>
+       
+        </div>
+ 
+
+  <div class="row">
+      <div class="col-sm-4">
+      <div class="card-block">
+        <h3 class="card-title">Add a Race</h3>
+    
+      {{!-- <div class="col-sm-4"> --}}
+        
+            <form action="/athletes/raceAdd" method="POST">
+              <textarea name="race" id="race_input">Race: </textarea>
+              <textarea name="placement" id="place_input">Placement: </textarea>
+              <textarea name="date" id="date_input">Date: </textarea>
+              <button class="btn btn-default" type="submit" id="submit">Submit</button>
+            </form>
+            {{!-- <a class="btn btn-default" href="#" role="button" id="newRace">Submit</a> --}}
+      </div>
+      </div>
+
+          <div class="col-sm-4">
+            <div class="card-header">
+              <div class="card-block">
+                  <h3>Upcoming Races </h3> 
+                     {{#each athletes}}
+
+                     {{#unless completed}}
+            <p>
+            <div class="row">
+              <div id="races"class="col-sm-3">
+
+               {{this.id}}
+              </div>
+              <div class="col-sm-3">
+
+              </div>
+            </div>
+            </p>
+
+            </div>
+            {{/unless}}
+             {{/each}}
+            </div>
+              
+          </div>
+            
+
+
+          <div class="col-md-4">
+            <div class="card-block">
+
+            <h4 class="card-title">Races Completed</h4> 
+             <p>
+              {{#each races}}
+                <p>{{name}} - {{date}}</p>
+              {{/each}}
+              </p>
+            </div>
+         
+            
+             
+          </div>
+  </div>
+
+
+
+ 
+</div>
+
+
+    
+      
+    
+
+    
+      
+ 

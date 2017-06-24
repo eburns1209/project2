@@ -1,0 +1,81 @@
+
+<link rel="stylesheet" type="text/css" href="assets/css/athlete.css">
+<script type="text/javascript" src="assets/js/athlete.js"></script>
+
+{{!-- <div class="body"> --}}
+
+<div class="card">
+		<div class="card-header">
+			<h3>Workouts</h3>
+				<div class="routineButton">
+					{{!-- <h4>Add your workout</h4> --}}
+					{{!-- <a class="btn btn-primary" href="/routine" role="button" id="train">Add </a> --}}
+					<a class="btn btn-primary" href="/choose" role="button" id="home">home</a>
+			
+				</div>
+		</div>
+	<div class="row">
+		<div class="col-sm-4">
+		<div class="card-block">
+				<h4 class="card-title">Add your workout </h4>
+				
+				<form action="/routine" method="POST">
+					  <textarea name="activity">Activity: </textarea>
+					  <textarea name="duration">Duration: </textarea>
+					  <textarea name="date">Date: </textarea>
+					 
+				</form>
+ 				<a class="btn btn-default" href="/training" role="button" id="submit">Submit</a>	
+			
+		</div>
+		</div>
+
+
+
+		
+
+		<div class="col-sm-4">
+          <div class="card-header">
+			<div class="card-block">
+            <h3>Upcoming Workouts </h3> 
+          		{{#each coaches}}
+
+          		{{#unless completed}}
+        
+           
+              <p>
+				<div class="row">
+				<div id="train" class="col-sm-3">
+            		{{this.id}}
+            	</div>
+            	<div class="col-sm-3">
+
+            	</div>
+            </div>
+              </p>
+            </div>
+            {{/unless}}
+            {{/each}}
+          </div>
+		</div>
+		
+		<div class="col-sm-4">
+			<div class="card-block">
+				<h4 class="card-title">Routines Completed</h4>
+				
+					<p class="card-text">
+				        {{#each training}}
+				          <p>{{Activity}}  {{Date}} </p>
+				      	
+				      		
+				      	{{/each}}
+				       
+					</p>
+			</div>	
+		</div>
+	</div>
+			
+		
+
+
+</div>

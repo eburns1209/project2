@@ -1,0 +1,83 @@
+body{
+	background-color: 	#DCDCDC;
+	background-repeat: repeat;
+	/*height: 100%;*/
+}
+
+./*card{
+	background-image: url("../img/road.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	
+	background-image: cover;
+}*/
+
+h2{
+	margin: 5px;
+}
+
+h3{
+	margin:15px;
+}
+
+h4{
+	text-align: center;
+}
+
+#start{
+	padding-bottom: 9px;
+}
+
+.trainLog{
+	margin:20px;
+	padding:10px;
+
+
+}
+
+.card-block{
+	border: 5px solid gray;
+	margin: 10px;
+	/*margin: 10px;*/
+	padding: 10px;
+	width: 320px;
+
+}
+
+.card-pic{
+	border: 5px solid gray;
+	margin: 10px;
+	padding: 10px;
+	width: 320px;
+}
+
+/*.routineButton{
+	text-align: center;
+	
+}*/
+
+.buttons{
+	display: inline-block;
+	margin: 5px;
+}
+
+
+
+li{
+	margin:5px;
+}
+
+.jumbotron{
+	text-align: center;
+}
+
+p{
+	margin: 10px;
+}
+
+.trainLog{
+	margin: 5px;
+	
+
+}
+
